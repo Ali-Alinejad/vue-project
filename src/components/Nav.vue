@@ -81,7 +81,8 @@ const password = ref('')
 const router = useRouter()
 
 const handleLogin = () => {
-  router.push({ name: 'welcome' })
+  // Navigate to the welcome page with the first name as a query parameter
+  router.push({ name: 'welcome', query: { firstName: firstName.value } })
 
   console.log(`نام: ${firstName.value}`)
   console.log(`نام خانوادگی: ${lastName.value}`)
