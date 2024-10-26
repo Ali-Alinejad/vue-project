@@ -11,7 +11,9 @@
       </h1>
 
       <div class="mb-4">
-        <label for="firstName" class="block text-sm font-medium text-gray-700"
+        <label
+          for="firstName"
+          class="block text-right text-sm font-medium text-gray-700"
           >نام</label
         >
         <input
@@ -24,7 +26,9 @@
       </div>
 
       <div class="mb-4">
-        <label for="lastName" class="block text-sm font-medium text-gray-700"
+        <label
+          for="lastName"
+          class="block text-right text-sm font-medium text-gray-700"
           >نام خانوادگی</label
         >
         <input
@@ -37,7 +41,9 @@
       </div>
 
       <div class="mb-4">
-        <label for="password" class="block text-sm font-medium text-gray-700"
+        <label
+          for="password"
+          class="block text-right text-sm font-medium text-gray-700"
           >رمز عبور</label
         >
         <input
@@ -67,12 +73,16 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const firstName = ref('')
 const lastName = ref('')
 const password = ref('')
+const router = useRouter()
 
 const handleLogin = () => {
+  router.push({ name: 'welcome' })
+
   console.log(`نام: ${firstName.value}`)
   console.log(`نام خانوادگی: ${lastName.value}`)
   console.log(`رمز عبور: ${password.value}`)

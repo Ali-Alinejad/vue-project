@@ -1,9 +1,10 @@
-<script setup>
-import Nav from './components/Nav.vue'
-</script>
-
+<!-- src/App.vue -->
 <template>
-  <div><Nav /></div>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
-<style scoped></style>
+<script setup></script>
+
+<style></style>
