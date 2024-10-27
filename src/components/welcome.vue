@@ -3,7 +3,7 @@
   <div
     class="flex justify-around flex-row gap-10 items-center place-items-center h-[100vh]"
   >
-    <Button :color="primary" @click="showModal"> test </Button>
+    <Button :color="primary" @click="showModal = true"> test </Button>
 
     <select
       class="w-40 h-10 rounded p-2"
