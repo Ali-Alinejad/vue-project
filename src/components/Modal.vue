@@ -6,11 +6,12 @@
       backgroundClass,
       'inset-0 bg-gray-800 bg-opacity-40 flex items-center justify-center z-50',
     ]"
+    role="dialog"
+    aria-modal="true"
   >
     <div
       :class="[
         'bg-white',
-
         'w-[80%] max-w-md h-auto rounded-2xl text-right shadow-xl relative',
       ]"
     >
@@ -25,14 +26,20 @@
         >
       </div>
       <div class="p-6 text-gray-700">
-        <slot>{{ status }}</slot>
+        <slot>{{ status || 'Default content goes here' }}</slot>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { defineProps, defineEmits, computed } from 'vue'
+import {
+  defineProps,
+  defineEmits,
+  computed,
+  onMounted,
+  onBeforeUnmount,
+} from 'vue'
 
 const props = defineProps({
   isVisible: {
@@ -50,6 +57,21 @@ const emit = defineEmits()
 const closeModal = () => {
   emit('close')
 }
+
+// Close modal on Escape key
+const handleKeydown = event => {
+  if (event.key === 'Escape') {
+    closeModal()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', handleKeydown)
+})
 
 const backgroundClass = computed(() => {
   switch (props.status) {

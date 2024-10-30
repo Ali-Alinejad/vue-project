@@ -1,12 +1,11 @@
-<!-- eslint-disable no-unused-vars -->
 <template>
-  <div
-    class="flex justify-around flex-row gap-10 items-center place-items-center h-[100vh]"
-  >
-    <Button :color="primary" @click="showModal = true"> test </Button>
+  <div class="flex justify-around flex-row gap-10 items-center h-[100vh]">
+    <Button :color="buttonColors.error" @click="isModalVisible = true">
+      Test
+    </Button>
 
     <select
-      class="w-40 h-10 rounded p-2"
+      class="w-40 h-10 rounded p-2 border border-gray-300"
       v-model="selectedOption"
       @change="logSelectedOption"
     >
@@ -16,47 +15,25 @@
     </select>
 
     <Modal
-      :isVisible="showModal"
-      @close="showModal = false"
+      :isVisible="isModalVisible"
+      @close="isModalVisible = false"
       :status="selectedOption"
     />
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import Modal from './Modal.vue'
-import Button from './Button.vue'
+import Button from './Button/Button.vue'
+import { buttonColors } from './Button/ButtonColor'
 
-const showModal = ref(false)
+const isModalVisible = ref(false)
 const selectedOption = ref('transparent')
 
-const logSelectedOption = event => {
-  const status = event.target.value
-  console.log(status)
-  selectedOption.value = status
+const logSelectedOption = (event: Event) => {
+  const target = event.target as HTMLSelectElement
+  selectedOption.value = target.value
+  console.log(selectedOption.value)
 }
-// eslint-disable-next-line no-unused-vars
-const props = defineProps({
-  default: {
-    type: String,
-    default: 'blue',
-  },
-  secondary: {
-    type: String,
-    default: 'purple',
-  },
-  primary: {
-    type: String,
-    default: 'green',
-  },
-  error: {
-    type: String,
-    default: 'red',
-  },
-  warning: {
-    type: String,
-    default: 'yellow',
-  },
-})
 </script>

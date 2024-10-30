@@ -52,7 +52,7 @@ const createRipple = event => {
 
   setTimeout(() => {
     rippleVisible.value = false
-  }, 100)
+  }, 200)
 }
 
 const buttonColor = computed(() => {
@@ -79,7 +79,7 @@ const resetRipple = () => {
 .ripple {
   position: absolute;
   transform: scale(2);
-  animation: ripple-animation 0.1s linear forwards;
+  animation: ripple-animation 0.2s linear forwards;
 }
 
 @keyframes ripple-animation {
