@@ -1,18 +1,13 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
-import Nav from '../components/Nav.vue'
-import welcome from '../components/welcome.vue'
+import Main from '@/components/main.vue'
 
 const routes = [
+  {},
   {
     path: '/',
-    name: 'Nav',
-    component: Nav,
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    component: welcome,
+    name: 'main',
+    component: Main,
   },
 ]
 
