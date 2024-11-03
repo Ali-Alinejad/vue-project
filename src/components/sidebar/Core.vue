@@ -1,11 +1,18 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const isOpen = ref(false)
+
+function toggleSidebar() {
+  isOpen.value = !isOpen.value
+}
+</script>
 
 <template>
   <div>
     <button
-      data-drawer-target="sidebar-multi-level-sidebar"
-      data-drawer-toggle="sidebar-multi-level-sidebar"
+      @click="toggleSidebar"
       aria-controls="sidebar-multi-level-sidebar"
       type="button"
       class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -16,7 +23,6 @@
         aria-hidden="true"
         fill="currentColor"
         viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -28,22 +34,30 @@
 
     <aside
       id="sidebar-multi-level-sidebar"
-      class="fixed top-0 left-0 h-screen transition-transform -translate-x-full sm:translate-x-0 w-[20%]"
+      :class="[
+        'fixed top-0 left-0 h-screen transition-transform',
+        isOpen ? 'translate-x-0' : '-translate-x-full',
+        'sm:translate-x-0 w-[20%]',
+      ]"
       aria-label="Sidebar"
     >
       <div
-        class="h-full px-3 py-12 overflow-y-auto bg-gray-50 dark:bg-gray-800"
+        class="h-full px-5 py-12 overflow-y-auto bg-gray-50 dark:bg-gray-800"
       >
-        <ul class="space-y-10 font-medium">
+        <div
+          class="text-white xl:text-3xl border-b-[1px] w-full pb-10 xl:pl-20 lg:text-xl lg:pl-8"
+        >
+          پیشخوان اصلی
+        </div>
+        <ul class="space-y-4 font-medium mt-10">
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-8 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 22 21"
               >
@@ -61,12 +75,11 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-8 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
                 class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 18 18"
               >
@@ -84,12 +97,11 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-8 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
                 class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -99,20 +111,19 @@
               </svg>
               <span class="flex-1 ms-3 whitespace-nowrap">نامه</span>
               <span
-                class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
-                >3</span
+                class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-yellow-200 rounded-full dark:bg-gray-700 dark:text-white animate-pulse"
+                >1</span
               >
             </a>
           </li>
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-8 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
                 class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 20 18"
               >
@@ -127,12 +138,11 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-8 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
                 class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 18 16"
               >
@@ -150,7 +160,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-8 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
                 class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
