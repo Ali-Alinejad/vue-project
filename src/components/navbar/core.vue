@@ -1,21 +1,12 @@
 <template>
-  <nav class="bg-blue-900 shadow-md h-[10vh]">
+  <nav class="shadow-inner border-2 ring-4 rounded-3xl">
     <div class="max-w-7xl flex justify-between items-center p-4 mx-auto">
       <div class="flex items-center space-x-4">
         <div class="text-2xl font-bold text-white">MyApp</div>
-        <button @click="refresh" class="text-white hover:text-gray-300">
-          <svg
-            class="w-6 h-6"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M17 1L21 5 17 9" />
-            <path d="M7 5H21" />
-          </svg>
-        </button>
+        <button
+          @click="refresh"
+          class="text-white hover:text-gray-300"
+        ></button>
       </div>
 
       <div class="flex items-center space-x-6">
@@ -31,22 +22,24 @@
             <path d="M21 12H3" />
             <path d="M12 3v18" />
           </svg>
-          <span
-            class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-            >3</span
-          >
         </button>
 
         <div class="flex items-center space-x-8">
-          <img
-            src="https://via.placeholder.com/2"
-            alt="Profile"
-            class="w-10 h-10 rounded-full border-2 border-white"
-          />
-          <div class="flex flex-col text-right">
-            <span class="text-xl text-white font-semibold">ادمین </span>
-            <span class="text-md mt-1 text-gray-200">{{ currentDate }}</span>
-            <span class="text-md font-mono text-gray-200">{{
+          <div class="flex flex-row-reverse text-right">
+            <div class="pl-4">
+              <img
+                src="https://via.placeholder.com/2"
+                alt="Profile"
+                class="w-10 h-10 rounded-full border-2 border-white"
+              />
+            </div>
+            <span
+              class="text-3xl text-white font-semibold border-l-[1px] ml-4 pl-8"
+              >ادمین
+            </span>
+
+            <span class="text-md m-2 text-gray-200">{{ currentDate }}</span>
+            <span class="text-md font-mono m-2 text-gray-200">{{
               currentTime
             }}</span>
           </div>
@@ -86,6 +79,4 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-/* سبک‌های اضافی برای بهبود ظاهر */
-</style>
+<style scoped></style>
