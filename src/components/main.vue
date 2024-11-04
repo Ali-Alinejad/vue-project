@@ -6,11 +6,13 @@ import Show from './show/core.vue'
 
 <template>
   <div class="flex h-[100vh]">
-    <div class="w-[20%] bg-blue-200 p-4">
+    <div class="w-[20%] p-4">
       <Sidebar />
     </div>
 
-    <div class="w-[80%] bg-slate-500 p-4">
+    <div
+      class="w-[80%] p-4 bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-gray-400 via-gray-400 to-slate-950"
+    >
       <Show />
     </div>
   </div>
