@@ -32,7 +32,7 @@
       aria-label="Sidebar"
     >
       <div
-        class="h-full px-5 py-12 overflow-y-auto bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-slate-600 to-slate-950"
+        class="h-full px-5 py-12 overflow-y-auto bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-gray-900 to-gray-600 border-r-4 border-gray-200"
       >
         <div
           class="text-white xl:text-3xl border-b-[1px] w-full pb-10 xl:pl-20 lg:text-xl lg:pl-8"
@@ -43,10 +43,10 @@
           <li v-for="(item, index) in sidebarItems" :key="index">
             <a
               href="#"
-              class="flex items-center p-8 ring-1 ring-black ring-opacity-20 text-gray-900 rounded-lg dark:text-white hover:shadow-inner hover:shadow-white dark:hover:shadow-inner dark:hover:shadow-black group active:scale-95 transition-all duration-300"
+              class="flex items-center p-8 ring-1 ring-black ring-opacity-20 text-gray-900 rounded-lg dark:text-white hover:shadow-inner hover:shadow-black dark:hover:shadow-inner dark:hover:shadow-gray-400 group active:scale-95 transition-all duration-300"
               @click="item.name === 'ورود' ? showAlarm() : null"
             >
-              <span v-html="item.icon"></span>
+              <span v-html="item.icon" class=""></span>
               <span class="flex-1 ms-3 whitespace-nowrap">{{ item.name }}</span>
             </a>
           </li>

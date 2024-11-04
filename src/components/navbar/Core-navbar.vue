@@ -1,5 +1,5 @@
 <template>
-  <nav class="shadow-inner border-2 ring-4 rounded-3xl">
+  <nav class="shadow-inner border-b-2 rounded-3xl">
     <div class="max-w-7xl flex justify-between items-center p-4 mx-auto">
       <div class="flex items-center space-x-4">
         <div class="text-2xl font-bold text-white">MyApp</div>

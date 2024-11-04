@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import Sidebar from './sidebar/Core.vue'
-import Show from './show/core.vue'
+import Sidebar from './sidebar/Core-sidebar.vue'
+import Show from './show/Core-show.vue'
 </script>
 
 <template>
