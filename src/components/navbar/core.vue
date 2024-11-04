@@ -3,10 +3,19 @@
     <div class="max-w-7xl flex justify-between items-center p-4 mx-auto">
       <div class="flex items-center space-x-4">
         <div class="text-2xl font-bold text-white">MyApp</div>
+        <input
+          class="rounded-xl p-2 bg-transparent border-[1px] border-gray-300 ring-1 ring-blue-900 text-white"
+          type="text"
+          placeholder="Search"
+          v-model="searchTexts"
+        />
+
         <button
           @click="refresh"
-          class="text-white hover:text-gray-300"
-        ></button>
+          class="text-white border-[1px] border-gray-300 p-2 rounded-xl hover:text-gray-300"
+        >
+          GO
+        </button>
       </div>
 
       <div class="flex items-center space-x-6">
@@ -52,6 +61,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const searchTexts = ref('')
+
 const currentTime = ref('')
 const currentDate = ref('')
 
@@ -69,7 +80,7 @@ function updateDateTime() {
 }
 
 function refresh() {
-  console.log('Refreshing...')
+  console.log('seraching ', searchTexts.value)
   updateDateTime()
 }
 
