@@ -16,20 +16,20 @@
       <Line
         :dataKeys="['name', 'pl']"
         type="monotone"
-        :lineStyle="{ stroke: '#9f7aea' }"
+        :lineStyle="{ stroke: '#9f7aea', strokeWidth: 2 }"
       />
       <Marker
         :value="1100"
         label="average"
         class="text-sm"
-        color="white"
+        color="black"
         strokeWidth="1"
         strokeDasharray="7 7"
       />
       <defs>
         <linearGradient id="grad" gradientTransform="rotate(90)">
-          <stop offset="30%" stop-color="green" stop-opacity="1" />
-          <stop offset="100%" stop-color="red" stop-opacity="0.6" />
+          <stop offset="30%" stop-color="white" stop-opacity="1" />
+          <stop offset="100%" stop-color="white" stop-opacity="0.6" />
         </linearGradient>
       </defs>
     </template>
@@ -37,6 +37,7 @@
     <template #widgets>
       <Tooltip
         borderColor="#48CAE4"
+        backgroundColor="#333"
         :config="{
           pl: {
             color: '#9f7aea',

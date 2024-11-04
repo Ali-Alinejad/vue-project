@@ -32,7 +32,7 @@
       aria-label="Sidebar"
     >
       <div
-        class="h-full px-5 py-12 overflow-y-auto bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-gray-900 to-gray-600 border-r-4 border-gray-200"
+        class="h-full px-5 py-12 overflow-y-auto bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-gray-900 to-gray-200 border-r-4 border-gray-200"
       >
         <div
           class="text-white xl:text-3xl border-b-[1px] w-full pb-10 xl:pl-20 lg:text-xl lg:pl-8"

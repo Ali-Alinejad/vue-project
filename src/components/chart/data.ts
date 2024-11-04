@@ -1,6 +1,6 @@
 export const plByMonth = [
-  { name: 'فروردین', pl: 1000, avg: 500, inc: 300 },
-  { name: 'اردیبهشت', pl: 1200, avg: 900, inc: 400 },
+  { name: 'فرورد', pl: 1000, avg: 500, inc: 300 },
+  { name: 'اردیب', pl: 1200, avg: 900, inc: 400 },
   { name: 'خرداد', pl: 900, avg: 400, inc: 500 },
   { name: 'تیر', pl: 1100, avg: 1300, inc: 700 },
   { name: 'مرداد', pl: 1500, avg: 90, inc: 100 },
