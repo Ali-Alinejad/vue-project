@@ -3,6 +3,7 @@
 import Navbar from '../navbar/Core-navbar.vue'
 import CoreChart1 from '../chart/Core-chart1.vue'
 import CoreChart2 from '../chart/Core-chart2.vue'
+import Cards from '../Cards/Card.vue'
 </script>
 
 <template>
@@ -21,14 +22,15 @@ import CoreChart2 from '../chart/Core-chart2.vue'
       <CoreChart2 />
     </div>
     <div
-      class="w-full h-[30vh] shadow-2xl border-2 border-gray-300 rounded-xl hover:cursor-pointer hover:ring-2 ring-blue-600 hover:border-white transition-all duration-300 col-span-2"
+      class="h-[30vh] shadow-2xl border-2 border-gray-300 rounded-xl hover:cursor-pointer hover:ring-2 ring-blue-600 hover:border-white transition-all duration-300 col-span-3 p-4"
+    >
+      <Cards />
+    </div>
+    <div
+      class="w-full h-24 shadow-2xl border-2 border-gray-300 rounded-xl hover:cursor-pointer hover:ring-2 ring-blue-600 hover:border-white transition-all duration-300 col-span-2"
     ></div>
     <div
-      class="w-full h-[30vh] shadow-2xl border-2 border-gray-300 rounded-xl hover:cursor-pointer hover:ring-2 ring-blue-600 hover:border-white transition-all duration-300"
-    ></div>
-
-    <div
-      class="h-24 shadow-2xl border-2 border-gray-300 rounded-xl hover:cursor-pointer hover:ring-2 ring-blue-600 hover:border-white transition-all duration-300 col-span-3"
+      class="w-full h-24 shadow-2xl border-2 border-gray-300 rounded-xl hover:cursor-pointer hover:ring-2 ring-blue-600 hover:border-white transition-all duration-300"
     ></div>
   </div>
 </template>
